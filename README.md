@@ -26,9 +26,9 @@ This is a simple test of basic CS fundamentals as well as basic Angular knowledg
 
 ### Extra Credit
 
-Two buttons, one that uses an iterative Fibonacci algorithm, and another that uses a recursive one, labeled appropriately.
+- Two buttons, one that uses an iterative Fibonacci algorithm, and another that uses a recursive one, labeled appropriately.
+- Automated tests included for the project. Use your framework of choice for testing and include dependencies such that we can run the tests here.
 
 
 ### Solution Discussion:
-
 - Your solution explanation goes here.
