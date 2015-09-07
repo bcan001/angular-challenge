@@ -32,3 +32,11 @@ This is a simple test of basic CS fundamentals as well as basic Angular knowledg
 
 ### Solution Discussion:
 - Your solution explanation goes here.
+
+My Solution:
+I chose to create an angular pageController(in controllers.js file) to handle recursive and iterative approaches to the Fibonacci sequence. I used the ng-click directive to run each of those equations when the button is clicked. 
+
+I chose to use the Jasmine testing framework for the automated tests. I embedded the html for the results of the test unit in the index.html file. The tests should run and display their results as soon as the page is loaded. 
+
+
+

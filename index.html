@@ -3,7 +3,11 @@
 	<meta charset="UTF-8">
 	<title>Angular-Challenge</title>
 	<script src="lib/angular/angular.min.js"></script>
-	
+
+	<!-- angular files -->
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script>
+
 	<!-- jasmine testing framework -->
 	<link rel="shortcut icon" type="image/png" href="lib/jasmine/jasmine-standalone-2.3.4/lib/jasmine-2.3.4/jasmine_favicon.png">
 	<link rel="stylesheet" type="text/css" href="lib/jasmine/jasmine-standalone-2.3.4/lib/jasmine-2.3.4/jasmine.css">
@@ -17,48 +21,11 @@
 </head>
 <body>
 	<div ng-controller="pageController">
-		<p>{{finalValue}}</p>
-		<button ng-click="pushButtonRecursive()">Recursive</button>
-		<button ng-click="pushButtonIterative()">Iterative</button>
+		<h4>Recursive Fibonacci</h4>
+		{{finalValueRecursive}} <button ng-click="pushButtonRecursive()">Recursive</button>
+		<h4>Iterative Fibonacci</h4>
+		{{finalValueIterative}} <button ng-click="pushButtonIterative()">Iterative</button>
 	</div>
 	</br>
-
-	<script>
-		var fibonacciApp = angular.module('fibonacciApp', ['fibonacciControllers']);
-		var fibonacciControllers = angular.module('fibonacciControllers', []);
-
-		fibonacciControllers.controller('pageController', ['$scope','$http', function ($scope, $http) {
-			$scope.finalValue = 0;
-
-			$scope.allValues = [0,1];
-			$scope.pushButtonRecursive = function() {
-				var fib = function () {
-					if ($scope.allValues.length < 4) {
-						$scope.finalValue = 1;
-					} else {
-						$scope.finalValue = ($scope.allValues[$scope.allValues.length - 1]) + ($scope.allValues[$scope.allValues.length - 2]);
-					}
-					$scope.allValues.push($scope.finalValue);
-				}
-				fib();
-			}
-
-			$scope.count = 1;
-			$scope.pushButtonIterative = function () {
-				var fib = function(n) {
-		    	var a = 0, b = 1, f = 1;
-		    	for(var i = 2; i <= n; i++) {
-		      	f = a + b;
-		      	a = b;
-		      	b = f;
-		  		}
-		    	$scope.finalValue = f;
-		    	$scope.count = $scope.count + 1;
-				};
-				fib($scope.count)
-			}
-		}]);
-	</script>
-
 </body>
 </html>
