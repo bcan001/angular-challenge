@@ -1,5 +1,3 @@
-
-
 var fibonacciControllers = angular.module('fibonacciControllers', []);
 
 	fibonacciControllers.controller('pageController', ['$scope','$http', function ($scope, $http) {
